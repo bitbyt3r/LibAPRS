@@ -63,7 +63,7 @@ void APRS_poll(void) {
     ax25_poll(&AX25);
 }
 
-void APRS_setCallsign(char *call, int ssid) {
+void APRS_setCallsign(const char *call, int ssid) {
     memset(CALL, 0, 7);
     int i = 0;
     while (i < 6 && call[i] != 0) {
@@ -73,7 +73,7 @@ void APRS_setCallsign(char *call, int ssid) {
     CALL_SSID = ssid;
 }
 
-void APRS_setDestination(char *call, int ssid) {
+void APRS_setDestination(const char *call, int ssid) {
     memset(DST, 0, 7);
     int i = 0;
     while (i < 6 && call[i] != 0) {
@@ -83,7 +83,7 @@ void APRS_setDestination(char *call, int ssid) {
     DST_SSID = ssid;
 }
 
-void APRS_setPath1(char *call, int ssid) {
+void APRS_setPath1(const char *call, int ssid) {
     memset(PATH1, 0, 7);
     int i = 0;
     while (i < 6 && call[i] != 0) {
@@ -93,7 +93,7 @@ void APRS_setPath1(char *call, int ssid) {
     PATH1_SSID = ssid;
 }
 
-void APRS_setPath2(char *call, int ssid) {
+void APRS_setPath2(const char *call, int ssid) {
     memset(PATH2, 0, 7);
     int i = 0;
     while (i < 6 && call[i] != 0) {
@@ -103,7 +103,7 @@ void APRS_setPath2(char *call, int ssid) {
     PATH2_SSID = ssid;
 }
 
-void APRS_setMessageDestination(char *call, int ssid) {
+void APRS_setMessageDestination(const char *call, int ssid) {
     memset(message_recip, 0, 7);
     int i = 0;
     while (i < 6 && call[i] != 0) {
@@ -133,7 +133,7 @@ void APRS_setSymbol(char sym) {
     symbol = sym;
 }
 
-void APRS_setLat(char *lat) {
+void APRS_setLat(const char *lat) {
     memset(latitude, 0, 9);
     int i = 0;
     while (i < 8 && lat[i] != 0) {
@@ -142,7 +142,7 @@ void APRS_setLat(char *lat) {
     }
 }
 
-void APRS_setLon(char *lon) {
+void APRS_setLon(const char *lon) {
     memset(longtitude, 0, 10);
     int i = 0;
     while (i < 9 && lon[i] != 0) {

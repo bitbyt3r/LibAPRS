@@ -11,19 +11,19 @@
 void APRS_init(int reference, bool open_squelch);
 void APRS_poll(void);
 
-void APRS_setCallsign(const char *call, int ssid);
-void APRS_setDestination(const char *call, int ssid);
-void APRS_setMessageDestination(const char *call, int ssid);
-void APRS_setPath1(const char *call, int ssid);
-void APRS_setPath2(const char *call, int ssid);
+void APRS_setCallsign(char *call, int ssid);
+void APRS_setDestination(char *call, int ssid);
+void APRS_setMessageDestination(char *call, int ssid);
+void APRS_setPath1(char *call, int ssid);
+void APRS_setPath2(char *call, int ssid);
 
 void APRS_setPreamble(unsigned long pre);
 void APRS_setTail(unsigned long tail);
 void APRS_useAlternateSymbolTable(bool use);
 void APRS_setSymbol(char sym);
 
-void APRS_setLat(const char *lat);
-void APRS_setLon(const char *lon);
+void APRS_setLat(char *lat);
+void APRS_setLon(char *lon);
 void APRS_setPower(int s);
 void APRS_setHeight(int s);
 void APRS_setGain(int s);
